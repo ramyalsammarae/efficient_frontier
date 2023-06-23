@@ -21,13 +21,13 @@ The efficient frontier guides rational investors in selecting portfolios based o
 ## Selected Assets
 I've selected the following assets for the portfolio optimization. Note that any ETF provider can be used (BlackRock, Vanguard, State Street, etc.) as well as any asset or number of assets, assuming the asset is listed on Yahoo Finance.
 
-ITOT - iShares Core S&P Total U.S. Stock Market ETF
-IXUS - iShares Core MSCI Total International Stock ETF
-AGG - iShares Core U.S. Aggregate Bond ETF
-IAGG - iShares Core International Aggregate Bond ETF
-REET - iShares Global REIT ETF
-GSG - iShares S&P GSCI Commodity-Indexed Trust
-BTC-USD - Bitcoin
+* ITOT - iShares Core S&P Total U.S. Stock Market ETF
+* IXUS - iShares Core MSCI Total International Stock ETF
+* AGG - iShares Core U.S. Aggregate Bond ETF
+* IAGG - iShares Core International Aggregate Bond ETF
+* REET - iShares Global REIT ETF
+* GSG - iShares S&P GSCI Commodity-Indexed Trust
+* BTC-USD - Bitcoin
 
 ## Portfolio Assumptions
 * Consists only of risk assets, consequently no Capital Allocation Line.
