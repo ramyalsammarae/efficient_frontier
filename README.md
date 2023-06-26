@@ -10,7 +10,7 @@ Where the expected return (E(r)) is the sum of the weighted returns and the vari
 At the most basic level, the theory provides a principled approach to constructing efficient portfolios, which reflect an optimal trade-off between risk and return.
 
 ## Multi-Asset Portfolio Optimization
-I wrote a Python script that uses Modern Portfolio Theory to optimize a multi-asset portfolio composed of seven broad risk assets. The code begins by identifying the portfolio assets, defining the lookback period, and pulling data using Yahoo Finance. The script then runs a Monte Carlo simulation, generating 20,000 hypothetical portfolios with accompanying returns, volatility, and Sharpe Ratios. And finally, the script plots the efficient frontier, marking the maximum Sharpe Ratio portfolio (best risk-adjusted return) and minimum volatility portfolio (lowest standard deviation). 
+I wrote a Python script that uses Modern Portfolio Theory to optimize a multi-asset portfolio composed of seven broad risk assets. The code begins by identifying the portfolio assets, defining the data range, and pulling data using Yahoo Finance. The script then runs a Monte Carlo simulation, generating 20,000 hypothetical portfolios with accompanying returns, volatility, and Sharpe Ratios. And finally, the script plots the efficient frontier, marking the maximum Sharpe Ratio portfolio (best risk-adjusted return) and minimum volatility portfolio (lowest standard deviation). 
 
 Below is a chart, for illustration purposes only, of an efficient frontier for a multi-asset portfolio. 
 
