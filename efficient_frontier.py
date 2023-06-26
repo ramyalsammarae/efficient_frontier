@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 import yfinance as yf
 yf.pdr_override()
 
-# pulls data from Yahoo Finance and sets a default trailing 10 year lookback period
+# pulls data from Yahoo Finance and sets a default trailing 10 year data range
 tickers = ['ITOT','IXUS','AGG','IAGG','REET','GSG','BTC-USD']
 end_date = dt.datetime.now()
 start_date = end_date - dt.timedelta(days=365*10)
@@ -18,13 +18,13 @@ ticker_data = pdr.get_data_yahoo(tickers, start=start_date, end=end_date)['Close
 # pulls the U.S. 10 Year Treasury Yield
 risk_free_rate = (yf.Ticker('^TNX').info['regularMarketPreviousClose'] / 100)
 
-# calculates the logarithmic returns, which better account for additivity and compounding 
-returns = np.log(ticker_data / ticker_data.shift(1))
-annual_returns = returns.mean() * 252
+# calculates the daily and annual returns 
+daily_returns = ticker_data.pct_change()
+annual_returns = daily_returns.mean() * 252
 
-# calculates the covariance of asset returns
-covariance = returns.cov()
-annual_covariance = covariance * 252
+# calculates the daily and annual covariance of returns
+daily_covariance = daily_returns.cov()
+annual_covariance = daily_covariance * 252
 
 # sets the number of iterations for the Monte Carlo simulation
 num_tickers = len(tickers)
